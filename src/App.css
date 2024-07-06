@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.hover\:text-custom {
+  transition: color 0.3s; /* Set the transition duration */
+}
+
+.hover\:text-custom:hover {
+  color: #ff5733; /* Change to your desired hover color */
+}
+
+.loading-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.loading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Adjust the height of the underline as needed */
+  width: 100%;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.loading-underline:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.custom-shadow {
+  box-shadow: rgb(41, 72, 80, 0.4) 5px 5px, rgba(41, 72, 80, 0.3) 10px 10px,
+    rgba(41, 72, 80, 0.2) 15px 15px, rgba(41, 72, 80, 0.1) 20px 20px,
+    rgba(41, 72, 80, 0.05) 25px 25px;
+}
+.PhoneInput {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.PhoneInputInput {
+  background-color: #0e1315;
+  padding: 8px;
+  border: 1px solid #263238;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  border-color: #263238 !important;
+  background-color: #0e1315 !important;
+  color: white !important;
+  font-family: 'Poppins'
+}
+.dark .react-tel-input .form-control {
+  width: 100% !important;
+  border-color: #263238 !important;
+  color: white !important;
+}
+
+.react-tel-input .form-control:hover {
+  border-color: #2d3e44 !important;
+}
+.react-tel-input .form-control:focus {
+  border-color: #9eade6 !important;
+}
+.dark .react-tel-input .form-control:focus {
+  border-color: #9eade6 !important;
+}
+
+.react-tel-input .form-control.error, .dark .react-tel-input .form-control.error{
+  border-color: #ef4444 !important;
+}
+
+.react-tel-input .selected-flag:focus::before, .react-tel-input .selected-flag::before, .react-tel-input .selected-flag.open::before {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .flag-dropdown .country-list {
+  background-color: #0e1315 !important;
+  border: 2px solid #263238 !important;
+}
+
+.react-tel-input .flag-dropdown .country-list .country:hover, .react-tel-input .flag-dropdown .country-list .country.highlight {
+ background-color: #1d272a!important;
+}
+.react-tel-input .flag-dropdown .country-list .country .dial-code {
+  color: var(--gray-400);
+}
